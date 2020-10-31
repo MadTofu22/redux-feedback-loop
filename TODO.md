@@ -1,6 +1,19 @@
 # TODO:
 ==============
 
+## Client Side Setup:
+
+[X] Setup Redux Store
+[X] Setup feedbackReducer
+[ ] Setup HashRouter routes in App.js
+- [ ] /feeling
+- [ ] /understanding
+- [ ] /support
+- [ ] /comments
+- [ ] /review
+- [ ] /thanks
+- [ ] STRETCH: /admin
+
 ## Create InputPage Component:
 
 [ ] Header
