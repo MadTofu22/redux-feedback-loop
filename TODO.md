@@ -6,7 +6,7 @@
 [X] Setup Redux Store
 [X] Setup feedbackReducer
 [ ] Setup HashRouter routes in App.js
-- [ ] /feeling
+- [X] /feeling
 - [ ] /understanding
 - [ ] /support
 - [ ] /comments

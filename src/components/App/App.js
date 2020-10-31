@@ -14,8 +14,7 @@ class App extends Component {
             <h4><i>Don't forget it!</i></h4>
           </header>
           <br/>
-          <Link to='/feeling'>Feeling</Link>
-
+          <Route exact path='/'><Link to='/feeling'><button>Get Started</button></Link></Route>
           <Route path='/feeling'><InputPage page='feeling' /></Route>
         </div>
       </Router>
