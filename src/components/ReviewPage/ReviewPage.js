@@ -6,9 +6,11 @@ import axios from 'axios';
 class ReviewPage extends Component {
 
     submitFeedback = () => {
-        axios.post('/feedback', this.props.reduxState.feedbackRucer).then(response => {
-            
-        })
+        axios.post('/feedback', this.props.reduxState.feedbackReducer).then(response => {
+            console.log(response.data);
+        }).catch(error => {
+            console.log(error);
+        });
     }
 
     render () {
@@ -21,7 +23,7 @@ class ReviewPage extends Component {
                 <h4>Understanding: {feedback.understanding}</h4>
                 <h4>Support: {feedback.support}</h4>
                 <h4>Comments: {feedback.comments}</h4>
-                <button >Submit</button>
+                <button onClick={this.submitFeedback}>Submit</button>
             </>
         );
     }
