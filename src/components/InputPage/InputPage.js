@@ -12,14 +12,13 @@ class InputPage extends Component {
 
     // This function sets the local state based on the page prop passed in on creation
     setPageInfo = (page) => {
-        console.log('in InputPage::setPageInfo, page:',page);
         switch (page) {
             default:
                 return {
-                    header: 'INVALID PAGE',
+                    header: '',
                     label: '',
                     actionType: '',
-                    nextPage: 'feeling',
+                    nextPage: '',
                     inputType: '',
                     placeholder: '',
                     input: ''
@@ -42,6 +41,26 @@ class InputPage extends Component {
                     nextPage: 'support',
                     inputType: 'number',
                     placeholder: '0-5',
+                    input: ''
+                };
+            case 'support':
+                return {
+                    header: 'How well are you being supported?',
+                    label: 'Supported?',
+                    actionType: 'SUPPORT_INPUT',
+                    nextPage: 'comments',
+                    inputType: 'number',
+                    placeholder: '0-5',
+                    input: ''
+                };
+            case 'comments':
+                return {
+                    header: 'Any comments you want to leave?',
+                    label: 'Comments?',
+                    actionType: 'COMMENTS_INPUT',
+                    nextPage: 'review',
+                    inputType: 'text',
+                    placeholder: 'Comments or concerns',
                     input: ''
                 };
         }
@@ -79,15 +98,6 @@ class InputPage extends Component {
             return true;
         }
     }
-
-    // // This function dictates the input placeholder based on it's type
-    // getPlaceholder = () => {
-    //     if (this.state.inputType === 'number') {
-    //         return '0-5';
-    //     } else {
-    //         return ''
-    //     }
-    // }
 
     render () {
         return (

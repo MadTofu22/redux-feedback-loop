@@ -17,7 +17,8 @@ class App extends Component {
           <Route exact path='/'><Link to='/feeling'><button>Get Started</button></Link></Route>
           <Route path='/feeling' component={() => {return <InputPage page='feeling'/>}}></Route>
           <Route path='/understanding' component={() => {return <InputPage page='understanding'/>}}></Route>
-        </div>
+          <Route path='/support' component={() => {return <InputPage page='support'/>}}></Route>
+          <Route path='/comments' component={() => {return <InputPage page='comments'/>}}></Route>
         </div>
       </Router>
     );

@@ -9,31 +9,31 @@
 - [X] /feeling
 - [X] /understanding
 - [X] /support
-- [ ] /comments
+- [X] /comments
 - [ ] /review
 - [ ] /thanks
 - [ ] STRETCH: /admin
 
 ## Create InputPage Component:
 
-[ ] Header
- - [ ] Different on each page
+[X] Header
+ - [X] Different on each page
  - - [X] How are you feeling today?
- - - [ ] How well are you understanding the content?
- - - [ ] How well are you being supported?
- - - [ ] Any commenty you want to leave?
+ - - [X] How well are you understanding the content?
+ - - [X] How well are you being supported?
+ - - [X] Any comments you want to leave?
 [ ] Next Button
 - [X] Routes to the next page
-- [ ] Comments page routes to Review Page
-[ ] Input
-- [ ] Input type is different on some pages
+- [X] Comments page routes to Review Page
+[X] Input
+- [X] Input type is different on some pages
 - - [X] Page 1-3 use Number input and need validation
 - - [X] Page 4 is a text input and can be empty
-- [ ] Input labels are different on each page
+- [X] Input labels are different on each page
 - - [X] Feeling?
 - - [X] Understanding?
-- - [ ] Support?
-- - [ ] Comments
+- - [X] Support?
+- - [X] Comments
 
 [ ] STRETCH: Allow user to go back and edit entries
 - [ ] Back Button
