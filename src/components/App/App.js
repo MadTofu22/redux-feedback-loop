@@ -16,7 +16,8 @@ class App extends Component {
           <br/>
           <Route exact path='/'><Link to='/feeling'><button>Get Started</button></Link></Route>
           <Route path='/feeling' component={() => {return <InputPage page='feeling'/>}}></Route>
-          <Route path='/understanding'><InputPage page='understanding' /></Route>
+          <Route path='/understanding' component={() => {return <InputPage page='understanding'/>}}></Route>
+        </div>
         </div>
       </Router>
     );

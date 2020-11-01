@@ -7,8 +7,8 @@
 [X] Setup feedbackReducer
 [ ] Setup HashRouter routes in App.js
 - [X] /feeling
-- [ ] /understanding
-- [ ] /support
+- [X] /understanding
+- [X] /support
 - [ ] /comments
 - [ ] /review
 - [ ] /thanks
@@ -23,15 +23,15 @@
  - - [ ] How well are you being supported?
  - - [ ] Any commenty you want to leave?
 [ ] Next Button
-- [ ] Routes to the next page
+- [X] Routes to the next page
 - [ ] Comments page routes to Review Page
 [ ] Input
 - [ ] Input type is different on some pages
-- - [ ] Page 1-3 use Number input and need validation
-- - [ ] Page 4 is a text input and can be empty
+- - [X] Page 1-3 use Number input and need validation
+- - [X] Page 4 is a text input and can be empty
 - [ ] Input labels are different on each page
 - - [X] Feeling?
-- - [ ] Understanding?
+- - [X] Understanding?
 - - [ ] Support?
 - - [ ] Comments
 

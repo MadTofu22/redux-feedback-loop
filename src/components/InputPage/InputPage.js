@@ -21,6 +21,7 @@ class InputPage extends Component {
                     actionType: '',
                     nextPage: 'feeling',
                     inputType: '',
+                    placeholder: '',
                     input: ''
                 };
             case 'feeling':
@@ -30,25 +31,20 @@ class InputPage extends Component {
                     actionType: 'FEELING_INPUT',
                     nextPage: 'understanding',
                     inputType: 'number',
+                    placeholder: '0-5',
                     input: ''
                 };
-            case '':
+            case 'understanding':
                 return {
-                    header: '',
-                    label: '',
-                    actionType: '',
-                    nextPage: '',
-                    inputType: '',
+                    header: 'How well are you understanding the content?',
+                    label: 'Understanding?',
+                    actionType: 'UNDERSTANDING_INPUT',
+                    nextPage: 'support',
+                    inputType: 'number',
+                    placeholder: '0-5',
                     input: ''
                 };
         }
-    }
-
-    // This function handles the input change
-    handleChange = () => {
-        this.setState({
-            input: this.inputRef.current.value
-        });
     }
 
     // This button handles the submit event and moves to the next page
@@ -61,7 +57,7 @@ class InputPage extends Component {
         if (valid) {
             this.props.dispatch({
                 type: this.state.actionType,
-                data: input
+                input
             });
             this.inputRef.current.value = '';
             this.props.history.push(path);
@@ -84,6 +80,15 @@ class InputPage extends Component {
         }
     }
 
+    // // This function dictates the input placeholder based on it's type
+    // getPlaceholder = () => {
+    //     if (this.state.inputType === 'number') {
+    //         return '0-5';
+    //     } else {
+    //         return ''
+    //     }
+    // }
+
     render () {
         return (
             <>
@@ -91,7 +96,8 @@ class InputPage extends Component {
                 <br/>
                 <label htmlFor='inputField'>{this.state.label}</label>
                 <br/>
-                <input type={this.state.inputType} name='inputField' ref={this.inputRef} placeholder='0-5' onChange={event => this.handleChange(event)}></input>
+                <input type={this.state.inputType} name='inputField' ref={this.inputRef} placeholder={this.state.placeholder}>
+                </input>
                 <button onClick={event => this.handleClick(event)}>Next</button>
             </>
         );
