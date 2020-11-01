@@ -10,7 +10,7 @@
 - [X] /understanding
 - [X] /support
 - [X] /comments
-- [ ] /review
+- [X] /review
 - [ ] /thanks
 - [ ] STRETCH: /admin
 
@@ -43,12 +43,12 @@
 
 ## Create ReviewPage Component:
 
-[ ] Header - Review Your Feedback
+[X] Header - Review Your Feedback
 [ ] Display inputs
-- [ ] Feelings:
-- [ ] Understanding: 
-- [ ] Support: 
-- [ ] Comments: 
+- [X] Feelings:
+- [X] Understanding: 
+- [X] Support: 
+- [X] Comments: 
 [ ] Submit Button
 - [ ] Stores feedback into DB
 - [ ] Progress to Thanks Page

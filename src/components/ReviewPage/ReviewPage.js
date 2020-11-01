@@ -1,11 +1,29 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import axios from 'axios';
 
 class ReviewPage extends Component {
 
+    submitFeedback = () => {
+        axios.post('/feedback', this.props.reduxState.feedbackRucer).then(response => {
+            
+        })
+    }
+
     render () {
-        return ();
+        const feedback = this.props.reduxState.feedbackReducer;
+
+        return (
+            <>
+                <h2>Review Your Feedback</h2>
+                <h4>Feelings: {feedback.feeling}</h4>
+                <h4>Understanding: {feedback.understanding}</h4>
+                <h4>Support: {feedback.support}</h4>
+                <h4>Comments: {feedback.comments}</h4>
+                <button >Submit</button>
+            </>
+        );
     }
 }
 
