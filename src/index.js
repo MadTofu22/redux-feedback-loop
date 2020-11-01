@@ -29,6 +29,13 @@ const feedbackReducer = (state={feeling:'', understanding:'', support:'', commen
             return {...state, support: action.input};
         case 'COMMENTS_INPUT':
             return {...state, comments: action.input};
+        case 'CLEAR_STATE':
+            return {
+                feeling: '',
+                understanding: '',
+                support: '',
+                comments: ''
+            };
     }
 }
 

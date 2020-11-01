@@ -21,7 +21,8 @@ class ThanksPage extends Component {
 
     // This function handles the click event for the leave new feedback button
     handleClick = () => {
-        
+        this.props.dispatch({type: 'CLEAR_STATE'});
+        this.props.history.push('/feeling');
     }
 
     render () {

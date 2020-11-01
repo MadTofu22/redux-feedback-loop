@@ -4,6 +4,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import InputPage from '../InputPage/InputPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
+import ThanksPage from '../ThanksPage/ThanksPage';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path='/support' component={() => {return <InputPage page='support'/>}}></Route>
           <Route path='/comments' component={() => {return <InputPage page='comments'/>}}></Route>
           <Route path='/review' component={ReviewPage}></Route>
+          <Route path='/thanks' component={ThanksPage}></Route>
         </div>
       </Router>
     );
