@@ -15,12 +15,13 @@ class App extends Component {
           </header>
           <br/>
           <Route exact path='/'><Link to='/feeling'><button>Get Started</button></Link></Route>
-          <Route path='/feeling'><InputPage page='feeling' /></Route>
+          <Route path='/feeling' component={() => {return <InputPage page='feeling'/>}}></Route>
+          <Route path='/understanding'><InputPage page='understanding' /></Route>
         </div>
       </Router>
     );
   }
 }
 
-const putReduxStateOnProps = (reduxState) => ({reduxState})
+const putReduxStateOnProps = (reduxState) => ({reduxState});
 export default connect(putReduxStateOnProps)(App);

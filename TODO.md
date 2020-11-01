@@ -18,7 +18,7 @@
 
 [ ] Header
  - [ ] Different on each page
- - - [ ] How are you feeling today?
+ - - [X] How are you feeling today?
  - - [ ] How well are you understanding the content?
  - - [ ] How well are you being supported?
  - - [ ] Any commenty you want to leave?
@@ -30,7 +30,7 @@
 - - [ ] Page 1-3 use Number input and need validation
 - - [ ] Page 4 is a text input and can be empty
 - [ ] Input labels are different on each page
-- - [ ] Feeling?
+- - [X] Feeling?
 - - [ ] Understanding?
 - - [ ] Support?
 - - [ ] Comments
