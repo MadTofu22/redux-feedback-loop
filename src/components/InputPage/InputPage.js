@@ -141,7 +141,11 @@ class InputPage extends Component {
                 <input type={this.state.inputType} defaultValue={this.defaultVal}name='inputField' ref={this.inputRef} placeholder={this.state.placeholder}>
                 </input>
                 <button onClick={event => this.handleClick(event)}>Next</button>
-                <button disabled={this.checkPage} onClick={this.goBack}>Back</button>
+                {this.props.page === 'feeling' ?
+                ''
+                :
+                <button onClick={this.goBack}>Back</button>
+                }
             </>
         );
     }

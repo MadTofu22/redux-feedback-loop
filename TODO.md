@@ -55,7 +55,7 @@
 
 [X] STRETCH: Allow user to go back and edit entries
 - [X] Back Button
-- - [ ] Previous pages should have the current entry when loaded
+- - [X] Previous pages should have the current entry when loaded
 
 ## Create ThanksPage Component:
 
