@@ -44,6 +44,15 @@ feedbackRouter.delete('/:id', (req, res) => {
 });
 
 // PUT route to update feedback entries marked for review.
+feedbackRouter.put('/:id', (req, res) => {
+    let id = req.params.id;
+    let queryText = `UPDATE "feedback" SET "flagged" = true WHERE "id" = $1;`;
 
+    pool.query(queryText, [id]).then(result => {
+        res.sendStatus(200);
+    }).catch(error => {
+        res.sendStatus(500);
+    });
+});
 
 module.exports = feedbackRouter;

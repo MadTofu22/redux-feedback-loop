@@ -57,7 +57,17 @@ class AdminPage extends Component {
 
     // This function updates flagged column for the selected feedback entries then refreshes the table
     updateSelected = () => {
+        let confirmation = window.confirm('Are you sure you would like to mark the selected entries for later review?');
 
+        if (confirmation) {
+            for (let row of this.state.rowParams)
+            axios.put(`/feedback/${row.id}`).then(response => {
+                console.log(response);
+                this.getFeedbackData();
+            }).catch(error => {
+                console.log(error);
+            });
+        }
     }
 
     render () {
@@ -71,12 +81,13 @@ class AdminPage extends Component {
 
         return (
             <>
-                <div className="adminData">
-                    <DataGrid autoPageSize={true} columns={columns} rows={this.state.feedbackData} pageSize={10} checkboxSelection showColumnRightBorder onSelectionChange={params => this.handleRowSelection(params.rows)}/>
-                </div>
                 <Button variant="contained" color="primary" onClick={this.updateSelected} disabled={this.state.btnDisabled}>Mark Selected For Review</Button>
-
+                
                 <Button variant="contained" color="secondary" onClick={this.deleteSelected} disabled={this.state.btnDisabled}>Delete Selected</Button>
+
+                <section className="adminData">
+                    <DataGrid autoPageSize={true} columns={columns} rows={this.state.feedbackData} pageSize={10} checkboxSelection showColumnRightBorder onSelectionChange={params => this.handleRowSelection(params.rows)}/>
+                </section>
             </>
         );
     }
