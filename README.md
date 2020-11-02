@@ -8,9 +8,9 @@ This project was created as a weekend challenge while attending [Prime Digital A
 
 ## Screenshot
 
-[Feedback Example](master/public/images/feedback_example.png)
+![Feedback Example](public/images/feedback_example.png)
 
-[Admin Example](public/images/admin_example.png)
+![Admin Example](public/images/admin_example.png)
 
 ### Prerequisites
 This poject uses the following software:
