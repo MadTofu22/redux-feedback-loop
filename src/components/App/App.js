@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import InputPage from '../InputPage/InputPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
 import ThanksPage from '../ThanksPage/ThanksPage';
+import AdminPage from '../AdminPage/AdminPage';
 import {Button} from '@material-ui/core';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path='/comments' component={() => {return <InputPage page='comments'/>}}></Route>
           <Route path='/review' component={ReviewPage}></Route>
           <Route path='/thanks' component={ThanksPage}></Route>
+          <Route path='/admin' component={AdminPage}></Route>
         </div>
       </Router>
     );

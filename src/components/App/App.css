@@ -25,3 +25,9 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.adminData {
+  margin: 1% auto;
+  height: 500px;
+  width: 700px;
+}

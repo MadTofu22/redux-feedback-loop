@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import axios from 'axios';
-import {Button, Card, CardHeader, CardContent, Typography, styled} from '@material-ui/core';
+import {Button, Card, CardContent, styled} from '@material-ui/core';
 
 const ReviewCard = styled(Card)({
     background: 'rgba(155, 18, 219, .8)',
