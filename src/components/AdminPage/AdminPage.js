@@ -60,13 +60,15 @@ class AdminPage extends Component {
         let confirmation = window.confirm('Are you sure you would like to mark the selected entries for later review?');
 
         if (confirmation) {
-            for (let row of this.state.rowParams)
-            axios.put(`/feedback/${row.id}`).then(response => {
-                console.log(response);
-                this.getFeedbackData();
-            }).catch(error => {
-                console.log(error);
-            });
+            for (let row of this.state.rowParams) {
+                console.log(row);
+                axios.put(`/feedback/${row.id}`, {flag: !row.flagged}).then(response => {
+                    console.log(response);
+                    this.getFeedbackData();
+                }).catch(error => {
+                    console.log(error);
+                });
+            }
         }
     }
 
