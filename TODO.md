@@ -1,9 +1,8 @@
 # TODO:
-==============
 
 ## Client Side Setup:
 
-- [X] Setup Redux Store
+- [O] Setup Redux Store
 - [X] Setup feedbackReducer
 - [X] Setup HashRouter routes in App.js
 - - [X] /feeling
