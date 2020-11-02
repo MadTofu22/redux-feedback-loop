@@ -68,7 +68,7 @@
 
 [X] Route server.js to feedback.router.js
 [X] Create POST request to prime_feedback DB
-[ ] Create GET request to prime_feedback DB
+[ ] STRETCH: Create GET request to prime_feedback DB
 [ ] STRETCH: Create DELETE request to prime_feedback DB
 
 ## STRETCH: Create Admin Page component
