@@ -8,7 +8,9 @@ import axios from 'axios';
 class AdminPage extends Component {
 
     state = {
-        feedbackData: []
+        feedbackData: [],
+        rowParams: [],
+        btnDisabled: true
     }
 
     componentDidMount () {
@@ -27,8 +29,38 @@ class AdminPage extends Component {
         });
     }
 
-    render () {
+    // This function updates the local state with the selected entries
+    handleRowSelection = (rowParams) => {
+        let btnDisabled = rowParams.length === 0 ? true : false;
+        this.setState({
+            ...this.state,
+            rowParams,
+            btnDisabled
+        });
+    }
 
+    // This function removes the selected entries from the DB then refreshes the table
+    deleteSelected = (rows) => {
+        let confirmation = window.confirm('Are you sure you want to delete the selected entries?');
+
+        if (confirmation){
+            for (let row of rows) {
+                axios.delete(`/${row.id}`).then(response => {
+                    console.log(response);
+                    this.getFeedbackData();
+                }).catch(error => {
+                    console.log(error);
+                });
+            }
+        }
+    }
+
+    // This function updates flagged column for the selected feedback entries then refreshes the table
+    updateSelected = (rows) => {
+
+    }
+
+    render () {
         const columns = [
             {field: 'feeling', headerName: 'Feeling', width: 100},
             {field: 'understanding', headerName: 'Understanding', width: 150},
@@ -40,10 +72,11 @@ class AdminPage extends Component {
         return (
             <>
                 <div className="adminData">
-                    <DataGrid autoPageSize={true} columns={columns} rows={this.state.feedbackData} pageSize={10} checkboxSelection showColumnRightBorder />
+                    <DataGrid autoPageSize={true} columns={columns} rows={this.state.feedbackData} pageSize={10} checkboxSelection showColumnRightBorder onSelectionChange={params => this.handleRowSelection(params.rows)}/>
                 </div>
-                <Button variant="contained" color="primary" onClick={this.markForReview}>Mark Selected For Review</Button>
-                <Button variant="contained" color="secondary" onClick={this.deleteSelected}>Delete Selected</Button>
+                <Button variant="contained" color="primary" onClick={this.updateSelected} disabled={this.state.btnDisabled}>Mark Selected For Review</Button>
+
+                <Button variant="contained" color="secondary" onClick={this.deleteSelected} disabled={this.state.btnDisabled}>Delete Selected</Button>
             </>
         );
     }
