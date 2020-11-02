@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import {Button, TextField} from '@material-ui/core';
 
 class InputPage extends Component {
 
@@ -73,6 +74,7 @@ class InputPage extends Component {
         let input = this.inputRef.current.value;
         let valid = this.validateInput(input, this.state.inputType);
         let path = '/' + this.state.nextPage;
+        console.log('input', input)
         
         if (valid) {
             this.props.dispatch({
@@ -136,16 +138,15 @@ class InputPage extends Component {
             <>
                 <h2>{this.state.header}</h2>
                 <br/>
-                <label htmlFor='inputField'>{this.state.label}</label>
+                <TextField variant="outlined" label={this.state.label} defaultValue={this.defaultVal} inputRef={this.inputRef} placeholder={this.state.placeholder} size="small"/>
                 <br/>
-                <input type={this.state.inputType} defaultValue={this.defaultVal}name='inputField' ref={this.inputRef} placeholder={this.state.placeholder}>
-                </input>
-                <button onClick={event => this.handleClick(event)}>Next</button>
+                <br/>
                 {this.props.page === 'feeling' ?
                 ''
                 :
-                <button onClick={this.goBack}>Back</button>
+                <Button variant="contained" size="large" color="secondary" onClick={this.goBack}>Back</Button>
                 }
+                <Button variant="contained" size="large" color="primary" onClick={event => this.handleClick(event)}>Next</Button>
             </>
         );
     }
