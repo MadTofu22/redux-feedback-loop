@@ -5,14 +5,15 @@
 
 [X] Setup Redux Store
 [X] Setup feedbackReducer
-[ ] Setup HashRouter routes in App.js
+[O] Setup HashRouter routes in App.js
 - [X] /feeling
 - [X] /understanding
 - [X] /support
 - [X] /comments
 - [X] /review
-- [ ] /thanks
+- [X] /thanks
 - [ ] STRETCH: /admin
+[X] Update visuals with material UI
 
 ## Create InputPage Component:
 
@@ -44,7 +45,7 @@
 ## Create ReviewPage Component:
 
 [X] Header - Review Your Feedback
-[ ] Display inputs
+[X] Display inputs
 - [X] Feelings:
 - [X] Understanding: 
 - [X] Support: 
@@ -66,9 +67,9 @@
 
 ## Create Server Routes:
 
-[ ] Route server.js to feedback.router.js
-[ ] Create POST request to prime_feedback DB
-[ ] Create GET request to prime_feedback DB
+[X] Route server.js to feedback.router.js
+[X] Create POST request to prime_feedback DB
+[ ] STRETCH: Create GET request to prime_feedback DB
 [ ] STRETCH: Create DELETE request to prime_feedback DB
 
 ## STRETCH: Create Admin Page component

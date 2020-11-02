@@ -1,3 +1,7 @@
+body {
+  background: lightBlue;
+}
+
 .App {
   text-align: center;
 }
@@ -17,3 +21,7 @@
   font-size: large;
 }
 
+.reviewCards {
+  display: flex;
+  justify-content: center;
+}

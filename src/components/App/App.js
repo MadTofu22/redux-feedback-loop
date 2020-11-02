@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import InputPage from '../InputPage/InputPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
 import ThanksPage from '../ThanksPage/ThanksPage';
+import {Button} from '@material-ui/core';
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
             <h4><i>Don't forget it!</i></h4>
           </header>
           <br/>
-          <Route exact path='/'><Link to='/feeling'><button>Get Started</button></Link></Route>
+          <Route exact path='/'><Link to='/feeling'><Button variant="contained" size="large" color="primary">Get Started</Button></Link></Route>
           <Route path='/feeling' component={() => {return <InputPage page='feeling'/>}}></Route>
           <Route path='/understanding' component={() => {return <InputPage page='understanding'/>}}></Route>
           <Route path='/support' component={() => {return <InputPage page='support'/>}}></Route>
