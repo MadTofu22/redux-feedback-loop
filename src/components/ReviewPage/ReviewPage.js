@@ -9,7 +9,7 @@ const ReviewCard = styled(Card)({
     width: '20%',
     height: '100%',
     borderRadius: 15,
-    margin: '2.5%'
+    margin: '1%'
 });
 
 class ReviewPage extends Component {
@@ -29,17 +29,35 @@ class ReviewPage extends Component {
         return (
             <>
                 <h2>Review Your Feedback</h2>
-                <ReviewCard variant="outlined">
-                    <CardContent>
-                        <h3>Feelings: </h3><br/>
-                        <h4>{feedback.feeling}</h4>
-                    </CardContent>
-                </ReviewCard>
-                <h4>Understanding: {feedback.understanding}</h4>
-                <h4>Support: {feedback.support}</h4>
-                <h4>Comments: {feedback.comments}</h4>
-                <button onClick={this.submitFeedback}>Submit</button>
-                <button onClick={() => this.props.history.goBack()}>Back</button>
+                <section className="reviewCards">
+                    <ReviewCard variant="outlined">
+                        <CardContent>
+                            <h3>Feelings:</h3><br/>
+                            <h4>{feedback.feeling}</h4>
+                        </CardContent>
+                    </ReviewCard>
+                    <ReviewCard variant="outlined">
+                        <CardContent>
+                            <h3>Understanding:</h3><br/>
+                            <h4>{feedback.understanding}</h4>
+                        </CardContent>
+                    </ReviewCard>
+                    <ReviewCard variant="outlined">
+                        <CardContent>
+                            <h3>Support:</h3><br/>
+                            <h4>{feedback.support}</h4>
+                        </CardContent>
+                    </ReviewCard>
+                    <ReviewCard variant="outlined">
+                        <CardContent>
+                            <h3>Comments:</h3><br/>
+                            <p>{feedback.comments}</p>
+                        </CardContent>
+                    </ReviewCard>
+                </section>
+                <Button variant="contained" size="large" color="secondary" onClick={() => this.props.history.goBack()}>Back</Button>
+                <Button variant="contained" size="large" color="primary" onClick={this.submitFeedback}>Submit</Button>
+                
             </>
         );
     }

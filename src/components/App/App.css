@@ -17,6 +17,7 @@
   font-size: large;
 }
 
-reviewCard {
-  maxWidth: 200,
+.reviewCards {
+  display: flex;
+  justify-content: center;
 }
