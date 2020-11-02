@@ -10,13 +10,16 @@ class AdminPage extends Component {
         feedbackData: []
     }
 
-    componentDidMount () {
-        // Get the data from the DB
-    }
-
     // Conect to the server and get the feedback data
     getFeedbackData = () => {
-
+        axios.get('/feedback').then(response => {
+            console.log(response.data);
+            this.setState({
+                feedbackData: response.data
+            });
+        }).catch(error => {
+            console.log(error);
+        });
     }
 
     render () {
