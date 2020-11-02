@@ -23,7 +23,7 @@ feedbackRouter.post('/', (req, res) => {
 feedbackRouter.get('/', (req, res) => {
     let queryText = (`SELECT * FROM "feedback" ORDER BY "id" DESC;`);
 
-    pool.query(queryText).then (result => {
+    pool.query(queryText).then(result => {
         res.send(result.rows);
     }).catch(error => {
         res.sendStatus(500);
@@ -31,7 +31,17 @@ feedbackRouter.get('/', (req, res) => {
 });
 
 // DELETE request to remove a specific feedback entry.
+feedbackRouter.delete('/:id', (req, res) => {
+    console.log(req.params);
+    let id = req.params.id;
+    let queryText = `DELETE FROM "feedback" WHERE "id" = $1;`;
 
+    pool.query(queryText, [id]).then(result => {
+        res.sendStatus(200);
+    }).catch(error => {
+        res.sendStatus(500);
+    });
+});
 
 // PUT route to update feedback entries marked for review.
 

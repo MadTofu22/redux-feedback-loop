@@ -40,12 +40,12 @@ class AdminPage extends Component {
     }
 
     // This function removes the selected entries from the DB then refreshes the table
-    deleteSelected = (rows) => {
+    deleteSelected = () => {
         let confirmation = window.confirm('Are you sure you want to delete the selected entries?');
 
         if (confirmation){
-            for (let row of rows) {
-                axios.delete(`/${row.id}`).then(response => {
+            for (let row of this.state.rowParams) {
+                axios.delete(`/feedback/${row.id}`).then(response => {
                     console.log(response);
                     this.getFeedbackData();
                 }).catch(error => {
@@ -56,7 +56,7 @@ class AdminPage extends Component {
     }
 
     // This function updates flagged column for the selected feedback entries then refreshes the table
-    updateSelected = (rows) => {
+    updateSelected = () => {
 
     }
 
