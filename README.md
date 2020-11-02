@@ -7,8 +7,10 @@ This project aims to provid students with a form where they can enter feedback o
 This project was created as a weekend challenge while attending [Prime Digital Academy](www.primeacademy.io) in week 5 of Tier 2.
 
 ## Screenshot
-![Feedback Example](github.com/MadTofu22/redux-feedback-loop/blob/master/public/images/feedback_example.png)
-![Admin Example](github.com/MadTofu22/redux-feedback-loop/blob/master/public/images/admin_example.png)
+
+[Feedback Example](master/public/images/feedback_example.png)
+
+[Admin Example](public/images/admin_example.png)
 
 ### Prerequisites
 This poject uses the following software:
