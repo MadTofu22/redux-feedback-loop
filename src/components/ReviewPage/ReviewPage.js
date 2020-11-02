@@ -25,6 +25,7 @@ class ReviewPage extends Component {
                 <h4>Support: {feedback.support}</h4>
                 <h4>Comments: {feedback.comments}</h4>
                 <button onClick={this.submitFeedback}>Submit</button>
+                <button onClick={() => this.props.history.goBack()}>Back</button>
             </>
         );
     }
