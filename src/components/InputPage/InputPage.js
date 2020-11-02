@@ -109,6 +109,7 @@ class InputPage extends Component {
                 <input type={this.state.inputType} name='inputField' ref={this.inputRef} placeholder={this.state.placeholder}>
                 </input>
                 <button onClick={event => this.handleClick(event)}>Next</button>
+                <button onClick={() => this.props.history.goBack()}>Back</button>
             </>
         );
     }

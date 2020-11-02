@@ -49,20 +49,20 @@
 - [X] Understanding: 
 - [X] Support: 
 - [X] Comments: 
-[ ] Submit Button
-- [ ] Stores feedback into DB
-- [ ] Progress to Thanks Page
+[X] Submit Button
+- [X] Stores feedback into DB
+- [X] Progress to Thanks Page
 
-[ ] STRETCH: Allow user to go back and edit entries
-- [ ] Back Button
+[X] STRETCH: Allow user to go back and edit entries
+- [X] Back Button
 - - [ ] Previous pages should have the current entry when loaded
 
 ## Create ThanksPage Component:
 
-[ ] Header - Thank You!
-[ ] Leave New Feedback button
-- [ ] Returns user to Page 1
-- [ ] Starts new feedback entry process
+[X] Header - Thank You!
+[X] Leave New Feedback button
+- [X] Returns user to Page 1
+- [X] Starts new feedback entry process
 
 ## Create Server Routes:
 
