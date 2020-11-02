@@ -21,7 +21,7 @@ feedbackRouter.post('/', (req, res) => {
 
 // GET request to DB for all stored feedback entries.
 feedbackRouter.get('/', (req, res) => {
-    let queryText = (`SELECT * FROM "feedback" ORDER BY "id";`);
+    let queryText = (`SELECT * FROM "feedback" ORDER BY "id" DESC;`);
 
     pool.query(queryText).then (result => {
         res.send(result.rows);
