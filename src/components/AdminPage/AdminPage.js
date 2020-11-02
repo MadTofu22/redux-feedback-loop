@@ -88,7 +88,7 @@ class AdminPage extends Component {
                 <Button variant="contained" color="secondary" onClick={this.deleteSelected} disabled={this.state.btnDisabled}>Delete Selected</Button>
 
                 <section className="adminData">
-                    <DataGrid autoPageSize={true} columns={columns} rows={this.state.feedbackData} pageSize={10} checkboxSelection showColumnRightBorder onSelectionChange={params => this.handleRowSelection(params.rows)}/>
+                    <DataGrid autoHeight columns={columns} rows={this.state.feedbackData} checkboxSelection showColumnRightBorder onSelectionChange={params => this.handleRowSelection(params.rows)}/>
                 </section>
             </>
         );
