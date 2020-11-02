@@ -13,6 +13,7 @@
 - [X] /review
 - [X] /thanks
 - [ ] STRETCH: /admin
+[X] Update visuals with material UI
 
 ## Create InputPage Component:
 

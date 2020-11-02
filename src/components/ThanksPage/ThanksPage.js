@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import {Button} from '@material-ui/core';
+
 // import axios from 'axios';
 
 class ThanksPage extends Component {
@@ -29,7 +31,7 @@ class ThanksPage extends Component {
         return (
             <>
                 <h2>Thank You!</h2>
-                <button onClick={this.handleClick}>Leave New Feedback</button>
+                <Button variant="contained" size="large" color="primary" onClick={this.handleClick}>Leave New Feedback</Button>
             </>
         );
     }

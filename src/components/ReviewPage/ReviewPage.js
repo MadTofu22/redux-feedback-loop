@@ -9,7 +9,11 @@ const ReviewCard = styled(Card)({
     width: '20%',
     height: '100%',
     borderRadius: 15,
-    margin: '1%'
+    wrap: 'wrap',
+    margin: '1%',
+    overflow: 'wrap',
+    overflowWrap: 'break-word',
+    padding: '5px'
 });
 
 class ReviewPage extends Component {
@@ -51,7 +55,7 @@ class ReviewPage extends Component {
                     <ReviewCard variant="outlined">
                         <CardContent>
                             <h3>Comments:</h3><br/>
-                            <p>{feedback.comments}</p>
+                            <h4>{feedback.comments}</h4>
                         </CardContent>
                     </ReviewCard>
                 </section>
