@@ -78,7 +78,7 @@ class AdminPage extends Component {
             {field: 'understanding', headerName: 'Understanding', width: 150},
             {field: 'support', headerName: 'Support', width: 100},
             {field: 'comments', headerName: 'Comments', width: 200},
-            {field: 'flagged', headerName: 'Review?', width: 100}
+            {field: 'flagged', headerName: 'Review?', width: 100, valueGetter: params => params.getValue('flagged') ? 'Yes' : ''}
         ];
 
         return (
